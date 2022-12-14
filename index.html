@@ -72,7 +72,7 @@
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
-        config.devicePixelRatio = 1;
+      
         var buildUrl = "https://highwayracer.github.io/mbgame/Build";
         var config = {
           dataUrl: buildUrl + "/5cccd6d5e57a6f3cd080573572448925.data.unityweb",
@@ -86,6 +86,8 @@
           size: 114456593,
           split_size: 38152198,
         };
+        config.devicePixelRatio = 1;
+        var loaderUrl = buildUrl + "/BuilMB.loader.js";
         // unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
           var buildUrl = "https://highwayracer.github.io/pcgame/Build";
@@ -104,8 +106,9 @@
             // split_size: 38140005,
             // showBanner: unityShowBanner,
         };
+        var loaderUrl = buildUrl + "/Build.loader.js";
       }
-      var loaderUrl = buildUrl + "/Build.loader.js";
+      
 
 
       // By default Unity keeps WebGL canvas render target size matched with
